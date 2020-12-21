@@ -1,6 +1,6 @@
 const { Server } = require("http");
 const https = require("https");
-const Twitter = require("twitter-lite")
+const Twitter = require("twitter")
 require("dotenv").config();
 
 
@@ -10,13 +10,11 @@ var client = new Twitter({
     consumer_secret: process.env.Secret,
     bearer_token: process.env.Bearer
   });
-  client.post('statuses/update', {status: 'I Love Twitter'})
-  .then(function (tweet) {
-    console.log(tweet);
-  })
-  .catch(function (error) {
-    throw error;
-  })
+  client.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
+    if(error) console.log(error)
+    console.log(tweet);  // Tweet body.
+    console.log(response);  // Raw response object.
+  });
 
 
 
