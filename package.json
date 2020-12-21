@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sideeq Abdwaheed",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "unirest": "^0.6.0"
+  }
 }
