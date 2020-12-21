@@ -1,6 +1,8 @@
 const { Server } = require("http");
 const https = require("https");
 const unirest = require("unirest");
+const config = require("./config")
+console.log(config)
 
 unirest
   .post('http://mockbin.com/request')
