@@ -5,16 +5,16 @@ require("dotenv").config();
 
 
 
-var client = new Twitter({
-    consumer_key: process.env.API,
-    consumer_secret: process.env.Secret,
-    bearer_token: process.env.Bearer
-  });
-  client.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
-    if(error) console.log(error)
-    console.log(tweet);  // Tweet body.
-    console.log(response);  // Raw response object.
-  });
+// var client = new Twitter({
+//     consumer_key: process.env.API,
+//     consumer_secret: process.env.Secret,
+//     bearer_token: process.env.Bearer
+//   });
+//   client.post('statuses/update', {status: 'I Love Twitter'},  function(error, tweet, response) {
+//     if(error) console.log(error)
+//     console.log(tweet);  // Tweet body.
+//     console.log(response);  // Raw response object.
+//   });
 
 
 
